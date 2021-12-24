@@ -15,7 +15,7 @@ public class FlinkCDC_SQL {
 
         //3.创建表并连接MySQl
         tableEnv.executeSql("CREATE TABLE mysql_binlog (\n" +
-                " tm_id STRING not null,\n" +
+                " tm_id STRING,\n" +
                 " tm_name STRING\n" +
                 ") WITH (\n" +
                 " 'connector' = 'mysql-cdc',\n" +
