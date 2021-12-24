@@ -45,10 +45,10 @@ public class FlinkCDC_DataStream_Deserializer {
         DebeziumSourceFunction<String> sourceFunction = MySqlSource.<String>builder()
                 .hostname("hadoop102")
                 .port(3306)
-                .databaseList("gmall210726")
+                .databaseList("gmall_flink_210726")
                 .username("root")
                 .password("000000")
-                .tableList("gmall210726.base_trademark")
+//                .tableList("gmall_flink_210726.base_region")
                 .startupOptions(StartupOptions.initial())
                 .deserializer(new MyDeserial())
                 .build();
